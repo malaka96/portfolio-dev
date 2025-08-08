@@ -1,5 +1,31 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
 body {
     background-color: #050b18;
+}
+
+.custom-navbar{
+    background-color: #0e1525;
+}
+
+.nav-link{
+    color: #c6c9d1 !important;
+}
+
+.nav-bar-icons{
+    display: flex;
+    gap: 1rem;
+}
+
+.center-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
 
 .window {
@@ -36,6 +62,7 @@ body {
 .window-dot-container {
     display: flex;
     gap: 7px;
+    flex-direction: row;
     justify-content: start;
     align-items: center;
     padding-left: 1rem;
@@ -45,6 +72,11 @@ body {
     width: 15px;
     height: 15px;
     border-radius: 50%;
+}
+
+.window-title p{
+    margin: 0;
+    line-height: 1;
 }
 
 .chip {
