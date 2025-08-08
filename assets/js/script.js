@@ -2,6 +2,130 @@ const company = 'HelaDev XR Labs';
 const currentWorking = 'Time based game';
 const skills = ['Java', 'Flutter', 'Unity'];
 
+
+const projects = [
+    {
+        title: "robot-outline",
+        technology:"unity",
+        tags:['unity','c#','3D'],
+        source:'#',
+        code: [
+            '// Mobile AR game for collecting and battling virtual creatures',
+            ' ',
+            'public class ARCreatureSpawner : MonoBehaviour {',
+            '    [SerializeField] private GameObject creaturePrefab;',
+            '    private ARRaycastManager raycastManager;',
+            '    private Camera arCamera;',
+            '    void Update() {',
+            '        if (Input.touchCount > 0) {',
+            '            Touch touch = Input.GetTouch(0);',
+            '            if (touch.phase == TouchPhase.Began) {',
+            '                SpawnCreatureAtTouch(touch.position);',
+            '            }',
+            '        }',
+            '    }',
+            '}'
+        ]
+    },
+    {
+        title: "robot-outline",
+        technology:"unity",
+        tags:['unity','c#','3D'],
+        source:'#',
+        code: [
+            '// Mobile AR game for collecting and battling virtual creatures',
+            ' ',
+            'public class ARCreatureSpawner : MonoBehaviour {',
+            '    [SerializeField] private GameObject creaturePrefab;',
+            '    private ARRaycastManager raycastManager;',
+            '    private Camera arCamera;',
+            '    void Update() {',
+            '        if (Input.touchCount > 0) {',
+            '            Touch touch = Input.GetTouch(0);',
+            '            if (touch.phase == TouchPhase.Began) {',
+            '                SpawnCreatureAtTouch(touch.position);',
+            '            }',
+            '        }',
+            '    }',
+            '}'
+        ]
+    },
+    {
+        title: "robot-outline",
+        technology:"unity",
+        tags:['unity','c#','3D'],
+        source:'#',
+        code: [
+            '// Mobile AR game for collecting and battling virtual creatures',
+            ' ',
+            'public class ARCreatureSpawner : MonoBehaviour {',
+            '    [SerializeField] private GameObject creaturePrefab;',
+            '    private ARRaycastManager raycastManager;',
+            '    private Camera arCamera;',
+            '    void Update() {',
+            '        if (Input.touchCount > 0) {',
+            '            Touch touch = Input.GetTouch(0);',
+            '            if (touch.phase == TouchPhase.Began) {',
+            '                SpawnCreatureAtTouch(touch.position);',
+            '            }',
+            '        }',
+            '    }',
+            '}'
+        ]
+    },
+    {
+        title: "robot-outline",
+        technology:"unity",
+        tags:['unity','c#','3D'],
+        source:'#',
+        code: [
+            '// Mobile AR game for collecting and battling virtual creatures',
+            ' ',
+            'public class ARCreatureSpawner : MonoBehaviour {',
+            '    [SerializeField] private GameObject creaturePrefab;',
+            '    private ARRaycastManager raycastManager;',
+            '    private Camera arCamera;',
+            '    void Update() {',
+            '        if (Input.touchCount > 0) {',
+            '            Touch touch = Input.GetTouch(0);',
+            '            if (touch.phase == TouchPhase.Began) {',
+            '                SpawnCreatureAtTouch(touch.position);',
+            '            }',
+            '        }',
+            '    }',
+            '}'
+        ]
+    },
+    {
+        title: "robot-outline",
+        technology:"unity",
+        tags:['unity','c#','3D'],
+        source:'#',
+        code: [
+            '// Mobile AR game for collecting and battling virtual creatures',
+            ' ',
+            'public class ARCreatureSpawner : MonoBehaviour {',
+            '    [SerializeField] private GameObject creaturePrefab;',
+            '    private ARRaycastManager raycastManager;',
+            '    private Camera arCamera;',
+            '    void Update() {',
+            '        if (Input.touchCount > 0) {',
+            '            Touch touch = Input.GetTouch(0);',
+            '            if (touch.phase == TouchPhase.Began) {',
+            '                SpawnCreatureAtTouch(touch.position);',
+            '            }',
+            '        }',
+            '    }',
+            '}'
+        ]
+    },
+
+];
+
+// renderProjects(projects, "projects");
+
+
+
 function homeWindow() {
     const titleText = 'const developer = "Malaka Madhubhashana"';
     const words = titleText.split(" ");
@@ -75,5 +199,85 @@ function homeOtherText() {
 }
 
 homeOtherText();
+
+function renderProjects(projects) {
+
+    const projectContainer = document.querySelector('.project-windows-content');
+    // const container = document.querySelector('.project-pannel');
+    // container.innerHTML = ""; // Clear previous content
+
+    projects.forEach(project => {
+
+        const projectWindow = document.createElement('div');
+        projectWindow.className = 'project-window';
+
+        projectWindow.innerHTML = `
+        <div class="window-top-bar">
+                        <div class="project-window-top-bar-item d-flex align-items-center justify-content-center gap-3">
+                            <div class="window-dot-container">
+                                <div class="window-dot purple"></div>
+                            </div>
+                            <div class="window-title">
+                                <p>${project.title}</p>
+                            </div>
+                        </div>
+                        <span class="chip">
+                            <p class="chip-text">${project.technology}</p>
+                        </span>
+                    </div>
+                    <div class="window-content">
+                        <div class="project-pannel">
+                             
+                        </div>
+                        <div class="project-tags"></div>
+                        <div class="project-sources d-flex justify-content-start align-items-center gap-1">
+                            <a href="${project.source}">
+                                <img src="assets/images/github_light.png" alt="github-logo"
+                                    style="width: 18px; height: 18px;">
+                            </a>
+                            <p>source</p>
+                        </div>
+                    </div>
+        `;
+
+        // Create and style the title
+        // const titleEl = document.createElement("p");
+        // titleEl.textContent = project.title;
+        // titleEl.style.fontFamily = "monospace";
+        // titleEl.style.color = "#6a9955"; // comment-style green
+        // container.appendChild(titleEl);
+
+        if (project.code) {
+            const container = projectWindow.querySelector('.project-pannel');
+            const codeBlock = document.createElement("pre");
+            //   codeBlock.style.background = "#1e1e1e";
+            codeBlock.style.color = "#d4d4d4";
+            codeBlock.style.padding = "10px";
+            codeBlock.style.borderRadius = "6px";
+            codeBlock.style.overflowX = "auto";
+            codeBlock.style.fontFamily = "Fira Code, monospace";
+
+            codeBlock.innerHTML = project.code.map(line => `<div>${line}</div>`).join("");
+            container.appendChild(codeBlock);
+        }
+
+        const container = projectWindow.querySelector('.project-tags');
+        project.tags.forEach(tag => {
+            const chip = document.createElement("span");
+            chip.classList.add('chip');
+
+            const chipText = document.createElement("p");
+            chipText.classList.add('chip-text');
+            chipText.textContent = tag;
+            chip.appendChild(chipText);
+
+            container.appendChild(chip);
+        });
+
+        projectContainer.appendChild(projectWindow)
+    });
+}
+
+renderProjects(projects);
 
 console.log('script is loaded');
