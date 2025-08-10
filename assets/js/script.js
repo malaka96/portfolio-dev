@@ -22,52 +22,52 @@ const frameworks = [
 
 const programmingLanguages = [
     {
-        title : "Java",
-        emoji : "☕",
-        level : "Intermediate",
+        title: "Java",
+        emoji: "☕",
+        level: "Intermediate",
     },
     {
-        title : "Dart",
-        emoji : "🎯",
-        level : "Intermediate"
+        title: "Dart",
+        emoji: "🎯",
+        level: "Intermediate"
     },
     {
-        title : "C#",
-        emoji : "#️⃣",
-        level : "Intermediate"
+        title: "C#",
+        emoji: "#️⃣",
+        level: "Intermediate"
     },
     {
-        title : "JavaScript",
-        emoji : "⚡",
-        level : "Intermediate"
+        title: "JavaScript",
+        emoji: "⚡",
+        level: "Intermediate"
     }
 ]
 
 const devTools = [
     {
-        title : "Vs-Code",
-        emoji : "👨‍💻",
-        level : "Expert"
+        title: "Vs-Code",
+        emoji: "👨‍💻",
+        level: "Expert"
     },
     {
-        title : "Git",
-        emoji : "📝",
-        level : "Expert"
+        title: "Git",
+        emoji: "📝",
+        level: "Expert"
     },
     {
-        title : "Blender",
-        emoji : "🎭",
-        level : "Beginner"
+        title: "Blender",
+        emoji: "🎭",
+        level: "Beginner"
     },
     {
-        title : "Figma",
-        emoji : "🎨",
-        level : "Intermediate"
+        title: "Figma",
+        emoji: "🎨",
+        level: "Intermediate"
     },
     {
-        title : "Davinci-Resolve",
-        emoji : "🎥",
-        level : "Intermediate"
+        title: "Davinci-Resolve",
+        emoji: "🎥",
+        level: "Intermediate"
     }
 ]
 
@@ -76,66 +76,67 @@ const projects = [
         title: "robot-outline",
         technology: "unity",
         tags: ['unity', 'c#', '2D'],
-        source: '#',
+        source: 'https://github.com/malaka96/Robot-Outline',
         code: [
             '// Drawing project',
             ' ',
-            'public class ARCreatureSpawner : MonoBehaviour {',
-            '    [SerializeField] private GameObject creaturePrefab;',
-            '    private ARRaycastManager raycastManager;',
-            '    private Camera arCamera;',
-            '    void Update() {',
-            '        if (Input.touchCount > 0) {',
-            '            Touch touch = Input.GetTouch(0);',
-            '            if (touch.phase == TouchPhase.Began) {',
-            '                SpawnCreatureAtTouch(touch.position);',
-            '            }',
-            '        }',
-            '    }',
-            '}'
+            'private LineRenderer _lineRenderer;',
+            'private EdgeCollider2D _collider;',
+            'private readonly List<Vector2> points = new List<Vector2>()',
+            'private const int MAX_POSITION_COUNT = 50;',
+            'private void Awake()',
+            '{',
+            '    _lineRenderer = GetComponent<LineRenderer>();',
+            '    _collider = GetComponent<EdgeCollider2D>();',
+            '    _collider.transform.position -= transform.position;',
+            '}',
         ]
     },
     {
-        title: "robot-outline",
+        title: "Jump-Quest",
         technology: "unity",
-        tags: ['unity', 'c#', '3D'],
-        source: '#',
+        tags: ['unity', 'c#', '2D'],
+        source: 'https://github.com/malaka96/jump-quest',
         code: [
-            '// Mobile AR game for collecting and battling virtual creatures',
+            '// 2D game for gamejam project',
             ' ',
-            'public class ARCreatureSpawner : MonoBehaviour {',
-            '    [SerializeField] private GameObject creaturePrefab;',
-            '    private ARRaycastManager raycastManager;',
-            '    private Camera arCamera;',
-            '    void Update() {',
-            '        if (Input.touchCount > 0) {',
-            '            Touch touch = Input.GetTouch(0);',
-            '            if (touch.phase == TouchPhase.Began) {',
-            '                SpawnCreatureAtTouch(touch.position);',
-            '            }',
-            '        }',
-            '    }',
-            '}'
+            'void Update()',
+            '{',
+            '   if (canMove)',
+            '   {',
+            '       horizontalInput = Input.GetAxis("Horizontal");',
+            '        if (!isWallJumping)',
+            '        {',
+            '            if (horizontalInput > 0 && !isFacingRight)',
+            '                Flip();',
+            '            else if (horizontalInput < 0 && isFacingRight)',
+            '                Flip();',
+            '}',
         ]
     },
     {
-        title: "robot-outline",
+        title: "Cosmic Lifeline",
         technology: "unity",
         tags: ['unity', 'c#', '3D'],
-        source: '#',
+        source: 'https://heladev.itch.io/cosmiclifeline',
         code: [
-            '// Mobile AR game for collecting and battling virtual creatures',
-            ' ',
-            'public class ARCreatureSpawner : MonoBehaviour {',
-            '    [SerializeField] private GameObject creaturePrefab;',
-            '    private ARRaycastManager raycastManager;',
-            '    private Camera arCamera;',
-            '    void Update() {',
-            '        if (Input.touchCount > 0) {',
-            '            Touch touch = Input.GetTouch(0);',
-            '            if (touch.phase == TouchPhase.Began) {',
-            '                SpawnCreatureAtTouch(touch.position);',
-            '            }',
+            'private void OnTriggerEnter(Collider other)',
+            '{',
+            '    if (other.gameObject.CompareTag("SpaceShip"))',
+            '    {',
+            '        if (Spaceship_Controller.isShieldActivated)',
+            '        {',
+            '            Destroy(gameObject);',
+            '            AudioManager.instance.ObstacleHitSfx();',
+            '            Debug.Log("shield is activated!");',
+            '        }',
+            '        else',
+            '        {',
+            '            // AudioManager.instance.ObstacleHitSfx();',
+            '            //destroy obscales and shpaceship',
+            '            GameManager gameManagerScript = gameManager.GetComponent<GameManager>();',
+            '            gameManagerScript.UpdateShipHealth(-20);',
+            '            Debug.Log("you were hit obstacle");',
             '        }',
             '    }',
             '}'
