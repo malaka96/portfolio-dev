@@ -234,7 +234,7 @@ body {
 }
 
 
-.skill-window{
+.skill-window {
     width: 60%;
     height: 600px;
     background-color: bisque;
@@ -253,7 +253,7 @@ body {
     color: #fdc700;
 }
 
-.skill-card-container{
+.skill-card-container {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
@@ -290,6 +290,85 @@ body {
     font-weight: bold;
 }
 
+.experience-window {
+    width: 60%;
+    height: 750px;
+    background-color: bisque;
+    border: 1px solid #878787;
+    border-radius: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.experience-window .window-content {
+    display: flex;
+    flex-direction: row;
+}
+
+.experience-window .experience-titles .chip {
+    background-color: #473971;
+
+}
+
+
+.experience-window .experience-titles p {
+    font-size: 10px;
+}
+
+.experience-window .experience-left-side {
+    flex: 0.2;
+}
+
+.experience-window .experience-right-side {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.experience-window .w-card {
+    width: 100%;
+    height: 49%;
+}
+
+.experience-window .w-card-content h6 {
+    font-weight: normal;
+    color: #00d3f3;
+}
+
+.experience-window .experience-titles h6,
+.experience-window .experience-titles h5 {
+    font-weight: bold;
+}
+
+.experience-window .w-card .key-contribution h6 {
+    color: #9a33f8;
+}
+
+.experience-window .w-card .technology h6 {
+    color: #eecf20;
+}
+
+.experience-window .w-card-content {
+    justify-content: center;
+    gap: 10px;
+}
+
+.experience-window .divider {
+    width: 1px;
+    height: 300px;
+    background-color: #ccc;
+    /* margin: 0 20px; */
+}
+
+.experience-window .up-box {
+    padding-bottom: 1rem;
+}
+
+.experience-window .down-box {
+    padding-bottom: 12rem;
+}
 
 .chip {
     background-color: #293444;
@@ -329,6 +408,7 @@ body {
         padding-top: 110px;
     }
 
+    .experience-window,
     .projects-window,
     .skill-window,
     .window {
@@ -357,4 +437,23 @@ body {
         width: 100%;
     }
 
+    .experience-window .experience-left-side {
+        flex: 0.1;
+    }
+
+    .experience-window .w-card {
+        width: 100%;
+        height: auto;
+    }
+
+    .experience-window .divider {
+        width: 1px;
+        height: 600px;
+        background-color: #ccc;
+        /* margin: 0 20px; */
+    }
+
+    .experience-window .down-box {
+        padding-bottom: 2rem;
+    }
 }
