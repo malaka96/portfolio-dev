@@ -2,13 +2,81 @@ const company = 'HelaDev XR Labs';
 const currentWorking = 'Time based game';
 const skills = ['Java', 'Flutter', 'Unity'];
 
+const frameworks = [
+    {
+        title: "Unity",
+        emoji: "🎮",
+        level: "Intermediate"
+    },
+    {
+        title: "Flutter",
+        emoji: "📱",
+        level: "Intermediate"
+    },
+    {
+        title: "Bootstrap",
+        emoji: "🅱️",
+        level: "expert"
+    },
+]
+
+const programmingLanguages = [
+    {
+        title : "Java",
+        emoji : "☕",
+        level : "Intermediate",
+    },
+    {
+        title : "Dart",
+        emoji : "🎯",
+        level : "Intermediate"
+    },
+    {
+        title : "C#",
+        emoji : "#️⃣",
+        level : "Intermediate"
+    },
+    {
+        title : "JavaScript",
+        emoji : "⚡",
+        level : "Intermediate"
+    }
+]
+
+const devTools = [
+    {
+        title : "Vs-Code",
+        emoji : "👨‍💻",
+        level : "Expert"
+    },
+    {
+        title : "Git",
+        emoji : "📝",
+        level : "Expert"
+    },
+    {
+        title : "Blender",
+        emoji : "🎭",
+        level : "Beginner"
+    },
+    {
+        title : "Figma",
+        emoji : "🎨",
+        level : "Intermediate"
+    },
+    {
+        title : "Davinci-Resolve",
+        emoji : "🎥",
+        level : "Intermediate"
+    }
+]
 
 const projects = [
     {
         title: "robot-outline",
-        technology:"unity",
-        tags:['unity','c#','3D'],
-        source:'#',
+        technology: "unity",
+        tags: ['unity', 'c#', '3D'],
+        source: '#',
         code: [
             '// Mobile AR game for collecting and battling virtual creatures',
             ' ',
@@ -29,9 +97,9 @@ const projects = [
     },
     {
         title: "robot-outline",
-        technology:"unity",
-        tags:['unity','c#','3D'],
-        source:'#',
+        technology: "unity",
+        tags: ['unity', 'c#', '3D'],
+        source: '#',
         code: [
             '// Mobile AR game for collecting and battling virtual creatures',
             ' ',
@@ -52,9 +120,9 @@ const projects = [
     },
     {
         title: "robot-outline",
-        technology:"unity",
-        tags:['unity','c#','3D'],
-        source:'#',
+        technology: "unity",
+        tags: ['unity', 'c#', '3D'],
+        source: '#',
         code: [
             '// Mobile AR game for collecting and battling virtual creatures',
             ' ',
@@ -75,9 +143,9 @@ const projects = [
     },
     {
         title: "robot-outline",
-        technology:"unity",
-        tags:['unity','c#','3D'],
-        source:'#',
+        technology: "unity",
+        tags: ['unity', 'c#', '3D'],
+        source: '#',
         code: [
             '// Mobile AR game for collecting and battling virtual creatures',
             ' ',
@@ -98,9 +166,9 @@ const projects = [
     },
     {
         title: "robot-outline",
-        technology:"unity",
-        tags:['unity','c#','3D'],
-        source:'#',
+        technology: "unity",
+        tags: ['unity', 'c#', '3D'],
+        source: '#',
         code: [
             '// Mobile AR game for collecting and battling virtual creatures',
             ' ',
@@ -279,5 +347,69 @@ function renderProjects(projects) {
 }
 
 renderProjects(projects);
+
+function renderSkills() {
+    const frameworkElement = document.querySelector(".frameworks");
+
+    frameworks.forEach(framework => {
+        const card = document.createElement("div");
+        card.classList.add("w-card");
+        card.innerHTML = `
+            <div class="w-card-content">
+                            <h6 class="title">${framework.title}</h6>
+                            <div class="w-card-center d-flex align-items-center">
+                                <h4>${framework.emoji}</h4>
+                                <span class="chip">
+                                    <p class="chip-text">${framework.level}</p>
+                                </span>
+                            </div>
+                            <p>1. "${framework.title}" : "${framework.level}"</p>
+            </div>
+        `;
+        frameworkElement.appendChild(card);
+    });
+
+    const programmingLanElement = document.querySelector(".p-languages");
+
+    programmingLanguages.forEach(language => {
+        const card = document.createElement("div");
+        card.classList.add("w-card");
+        card.innerHTML = `
+            <div class="w-card-content">
+                            <h6 class="title">${language.title}</h6>
+                            <div class="w-card-center d-flex align-items-center">
+                                <h4>${language.emoji}</h4>
+                                <span class="chip">
+                                    <p class="chip-text">${language.level}</p>
+                                </span>
+                            </div>
+                            <p>1. "${language.title}" : "${language.level}"</p>
+            </div>
+        `;
+        programmingLanElement.appendChild(card);
+    });
+
+    const devToolElement = document.querySelector(".dev-tools");
+
+    devTools.forEach(devTool => {
+        const card = document.createElement("div");
+        card.classList.add("w-card");
+        card.innerHTML = `
+            <div class="w-card-content">
+                            <h6 class="title">${devTool.title}</h6>
+                            <div class="w-card-center d-flex align-items-center">
+                                <h4>${devTool.emoji}</h4>
+                                <span class="chip">
+                                    <p class="chip-text">${devTool.level}</p>
+                                </span>
+                            </div>
+                            <p>1. "${devTool.title}" : "${devTool.level}"</p>
+            </div>
+        `;
+        devToolElement.appendChild(card);
+    });
+}
+
+renderSkills();
 
 console.log('script is loaded');
