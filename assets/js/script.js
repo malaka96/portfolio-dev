@@ -75,10 +75,10 @@ const projects = [
     {
         title: "robot-outline",
         technology: "unity",
-        tags: ['unity', 'c#', '3D'],
+        tags: ['unity', 'c#', '2D'],
         source: '#',
         code: [
-            '// Mobile AR game for collecting and battling virtual creatures',
+            '// Drawing project',
             ' ',
             'public class ARCreatureSpawner : MonoBehaviour {',
             '    [SerializeField] private GameObject creaturePrefab;',
