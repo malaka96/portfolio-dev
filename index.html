@@ -4,28 +4,403 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Malaka Madhubhashana</title>
 </head>
 
 <body>
 
-    <!-- main window -->
-    <div class="window">
-        <div class="window-top-bar">
-            <div class="window-dot-container">
-                <div class="window-dot red"></div>
-                <div class="window-dot orange"></div>
-                <div class="window-dot green"></div>
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top custom-navbar">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img src="assets/images/hacker.png" alt=""
+                        style="width: 55px; height: 50px;"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">./home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#project-section">./projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#skill-section">./skills</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#experience-section">./experience</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact-section">./contact</a>
+                        </li>
+                    </ul>
+                    <div class="nav-bar-icons">
+                        <a href="https://github.com/malaka96" target="_blank" rel="noopener noreferrer">
+                            <img src="assets/images/github.png" alt="github-logo" style="width: 35px; height: 35px;">
+                        </a>
+                        <a href="https://www.linkedin.com/in/malaka-madhubhashana-65b810312/" target="_blank"
+                            rel="noopener noreferrer">
+                            <img src="assets/images/linkedin.png" alt="linkedin-logo"
+                                style="width: 36px; height: 36px;">
+                        </a>
+                    </div>
+                </div>
             </div>
-            <div class="window-title">
-                <p>~/home</p>
+        </nav>
+    </header>
+
+    <!-- home window -->
+    <div class="center-wrapper">
+        <div class="window" id="home-section">
+            <div class="window-top-bar">
+                <div class="window-dot-container">
+                    <div class="window-dot red"></div>
+                    <div class="window-dot orange"></div>
+                    <div class="window-dot green"></div>
+                </div>
+                <div class="window-title">
+                    <p>~/home</p>
+                </div>
+            </div>
+            <div class="window-content">
+                <p class="window-mini-title">$whoami</p>
+                <h1 id="window-content-title">const developer = "Malaka Madhubhashana"</h1>
+                <h4 id="typewriter">// Software Engineering Student</h4>
+                <h5 id="company"></h5>
+                <p class="window-mini-title">$ git status</p>
+                <div class="window-git-status">
+                    <p id="current-project"></p>
+                    <p id="skills"></p>
+                </div>
+                <div class="window-content-buttons">
+                    <a href="#project-section">
+                        <button type="button" class="btn custom-btn">💻 View My Projects</button></a>
+                    <a href="#contact-section">
+                        <button type="button" class="btn custom-btn2">💭 Get In Touch</button></a>
+                </div>
             </div>
         </div>
-        <div class="window-content">
-            <h6>contents</h6>
+        <!-- main window -->
+        <div class="projects-window" id="project-section">
+            <div class="window-top-bar">
+                <div class="window-dot-container">
+                    <div class="window-dot red"></div>
+                    <div class="window-dot orange"></div>
+                    <div class="window-dot green"></div>
+                </div>
+                <div class="window-title">
+                    <p>~/projects</p>
+                </div>
+            </div>
+            <div class="project-windows-content">
+                <!-- <div class="project-window">
+                    <div class="window-top-bar">
+                        <div class="project-window-top-bar-item d-flex align-items-center justify-content-center gap-3">
+                            <div class="window-dot-container">
+                                <div class="window-dot purple"></div>
+                            </div>
+                            <div class="window-title">
+                                <p>robot-outline</p>
+                            </div>
+                        </div>
+                        <span class="chip">
+                            <p class="chip-text">Unity</p>
+                        </span>
+                    </div>
+                    <div class="window-content">
+                        <div class="project-pannel">
+
+                        </div>
+                        <div class="project-tags">
+                            <span class="chip">
+                                <p class="chip-text">Unity</p>
+                            </span>
+                            <span class="chip">
+                                <p class="chip-text">C#</p>
+                            </span>
+                            <span class="chip">
+                                <p class="chip-text">3D</p>
+                            </span>
+                        </div>
+                        <div class="project-sources d-flex justify-content-start align-items-center gap-1">
+                            <a href="#">
+                                <img src="assets/images/github_light.png" alt="github-logo"
+                                    style="width: 18px; height: 18px;">
+                            </a>
+                            <p>source</p>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
         </div>
+
+        <div class="skill-window" id="skill-section">
+            <div class="window-top-bar">
+                <div class="window-dot-container">
+                    <div class="window-dot red"></div>
+                    <div class="window-dot orange"></div>
+                    <div class="window-dot green"></div>
+                </div>
+                <div class="window-title">
+                    <p>~/skills-inventory</p>
+                </div>
+            </div>
+            <div class="window-content d-flex flex-column">
+                <div class="skill-title">
+                    <span>1. "game_engines_and_frameworks" :</span><span class="bracket">
+                        &#123;</span>
+                </div>
+                <div class="frameworks skill-card-container ps-3">
+                    <!-- <div class="w-card">
+                        <div class="w-card-content">
+                            <h6 class="title">Unity</h6>
+                            <div class="w-card-center d-flex align-items-center">
+                                <h4>🎮</h4>
+                                <span class="chip">
+                                    <p class="chip-text">Intermediate</p>
+                                </span>
+                            </div>
+                            <p>1. "unity" : "expert"</p>
+                        </div>
+                    </div> -->
+
+                </div>
+                <span class="bracket">&#125;</span>
+
+                <div class="skill-title">
+                    <span>2. "programming_languages" : </span><span class="bracket">
+                        &#123;</span>
+                </div>
+                <div class="p-languages skill-card-container ps-3">
+                    <!-- <div class="w-card">
+                        <div class="w-card-content">
+                            <h6 class="title">Unity</h6>
+                            <div class="w-card-center d-flex align-items-center">
+                                <h4>🎮</h4>
+                                <span class="chip">
+                                    <p class="chip-text">Intermediate</p>
+                                </span>
+                            </div>
+                            <p>1. "unity" : "expert"</p>
+                        </div>
+                    </div> -->
+
+                </div>
+                <span class="bracket">&#125;</span>
+
+                <div class="skill-title">
+                    <span>3. "development_tools": </span><span class="bracket">
+                        &#123;</span>
+                </div>
+                <div class="dev-tools skill-card-container ps-3">
+                    <!-- <div class="w-card">
+                        <div class="w-card-content">
+                            <h6 class="title">VS Code</h6>
+                            <div class="w-card-center d-flex align-items-center">
+                                <h4>🎮</h4>
+                                <span class="chip">
+                                    <p class="chip-text">Intermediate</p>
+                                </span>
+                            </div>
+                            <p>1. "unity" : "expert"</p>
+                        </div>
+                    </div> -->
+
+                </div>
+                <span class="bracket">&#125;</span>
+
+            </div>
+        </div>
+
+        <!-- experience -->
+
+        <div class="experience-window" id="experience-section">
+            <div class="window-top-bar">
+                <div class="window-dot-container">
+                    <div class="window-dot red"></div>
+                    <div class="window-dot orange"></div>
+                    <div class="window-dot green"></div>
+                </div>
+                <div class="window-title">
+                    <p>~/work-experience</p>
+                </div>
+            </div>
+            <div class="window-content">
+                <div class="experience-left-side d-flex flex-column justify-content-center align-items-center">
+                    <div class="up-box"><img src="assets/images/code.png" alt="" style="width: 50px; height: 50px;">
+                    </div>
+                    <div class="divider"></div>
+                    <div class="down-box"><img src="assets/images/idea.png" alt="" style="width: 50px; height: 50px;">
+                    </div>
+                </div>
+                <div class="experience-right-side">
+                    <div class="w-card">
+                        <div class="w-card-content">
+                            <div class="experience-titles d-flex justify-content-between flex-wrap">
+                                <div class="title-up-part">
+                                    <h5>Game Programmer Intern</h5>
+                                    <h6>HelaDev XR Labs</h6>
+
+                                </div>
+                                <div class="title-down-part">
+                                    <span class="chip">
+                                        <p class="chip-text">Internship</p>
+                                    </span>
+                                    <p>Aug 2024 - Feb 2025</p>
+                                </div>
+                            </div>
+                            <div class="key-contribution">
+                                <h6>Key Contributions</h6>
+                                <ul>
+                                    <li>Built 2D/3D gameplay for PC and mobile.</li>
+                                    <li>Optimized rendering and asset loading systems.</li>
+                                    <li>Designed responsive UI for touch and desktop.</li>
+                                    <li>Integrated physics, controls, and game mechanics.</li>
+                                </ul>
+                            </div>
+                            <div class="technology">
+                                <h6>Technology Used</h6>
+                                <div class="tags">
+                                    <span class="chip">
+                                        <p class="chip-text">Unity</p>
+                                    </span>
+                                    <span class="chip">
+                                        <p class="chip-text">C#</p>
+                                    </span>
+                                    <span class="chip">
+                                        <p class="chip-text">Blender</p>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-card">
+                        <div class="w-card-content">
+                            <div class="experience-titles d-flex justify-content-between flex-wrap">
+                                <div class="title-up-part">
+                                    <h5>Game Development Student</h5>
+                                    <h6>Ceylon School of Game Design</h6>
+
+                                </div>
+                                <div class="title-down-part">
+                                    <span class="chip">
+                                        <p class="chip-text">Student</p>
+                                    </span>
+                                    <p>Feb 2024 - Apr 2025</p>
+                                </div>
+                            </div>
+                            <div class="key-contribution">
+                                <h6>Key Contributions</h6>
+                                <ul>
+                                    <li>Developed original game concepts and design documents.</li>
+                                    <li>Led team-based projects in game jams and hackathons.</li>
+                                    <li>Scripted gameplay events using C# and Unity engine.</li>
+                                    <li>Researched player psychology to improve game engagement.</li>
+                                </ul>
+                            </div>
+                            <div class="technology">
+                                <h6>Technology Used</h6>
+                                <div class="tags">
+                                    <span class="chip">
+                                        <p class="chip-text">Unity</p>
+                                    </span>
+                                    <span class="chip">
+                                        <p class="chip-text">C#</p>
+                                    </span>
+                                    <span class="chip">
+                                        <p class="chip-text">Blender</p>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- contact -->
+
+        <div class="contact-window" id="contact-section">
+            <div class="window-top-bar">
+                <div class="window-dot-container">
+                    <div class="window-dot red"></div>
+                    <div class="window-dot orange"></div>
+                    <div class="window-dot green"></div>
+                </div>
+                <div class="window-title">
+                    <p>~/contact-terminal</p>
+                </div>
+            </div>
+            <div class="window-content">
+                <div class="contact-window-left d-flex flex-column gap-4">
+                    <h5><span style="color: #e75eaa;">// </span><span style="color: #fdc700;">Let's Build Something
+                            Amazing Together</span></h5>
+                    <p><span style="color: #e75eaa;">const </span>email : <span
+                            style="color: #05df72">"madhubhashana655@gmail.com"</span></p>
+                    <p><span style="color: #e75eaa;">const </span>linkedin : <span
+                            style="color: #05df72">"https://www.linkedin.com/in/malaka-madhubhashana-65b810312/</span>
+                    </p>
+                    <p><span style="color: #e75eaa;">const </span>github : <span
+                            style="color: #05df72">"github.com/malaka96"</span></p>
+                    <div class="contact-window-seeking">
+                        <h6><span style="color: #e75eaa;">// Currently seeking</span></h6>
+                        <ul style="list-style-type: none;">
+                            <li>👨‍💻 Fullstack Developer Position</li>
+                            <li>📱 Flutter Project Collabarations</li>
+                            <li>🎮 Unity Project Collabarations</li>
+                            <li>💡 Innovate Tech Discussions</li>
+                        </ul>
+                    </div>
+                    <div class="w-card">
+                        <div class="w-card-content">
+                            <p>Response time : Usually within 24 hours</p>
+                            <p>Best contact : Linkedin message</p>
+                            <p>Time zone : UTC+5:30</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-window-right">
+                    <div class="w-card">
+                        <div class="w-card-content d-flex flex-column  gap-3 p-4">
+                            <p><span style="color: #05df72">$ node contact-form.js --interactive</span></p>
+                            <form class="d-flex flex-column gap-2" action="https://formspree.io/f/xqalwgzo"
+                                method="post">
+                                <label for="Name">🤵🏼 Name</label>
+                                <input type="text" placeholder="Enter you name" required>
+                                <label for="Email">📧 Email</label>
+                                <input type="email" name="email" placeholder="Enter you email" required>
+                                <label for="Message">💬 Message</label>
+                                <textarea name="message" rows="4"
+                                    placeholder="Tell me about your project or opportunity" required></textarea>
+                                <button type="submit" class="btn custom-btn">💻 ./send-message</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
+
+    <footer>
+        <div class="footer-container">
+            <p><span style="color: #e75eaa;">👨‍💻 Fullstack Developer 👨‍💻</span></p>
+            <p>$ echo "Thanks for exploring my dev journey"</p>
+            <p>// &#9400; 2025 Malaka Madhubhashana &#9679; Software Engineer &#9679; Game Developer</p>
+            <p>📱 🎮 📝 🚀 ⚡</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
