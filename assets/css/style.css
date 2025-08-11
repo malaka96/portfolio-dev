@@ -4,6 +4,7 @@ html {
 
 body {
     background-color: #050b18;
+    scrollbar-color: #444 #161c27;
 }
 
 .custom-navbar {
