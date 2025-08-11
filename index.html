@@ -28,23 +28,24 @@
                             <a class="nav-link active" href="#">./home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">./projects</a>
+                            <a class="nav-link" href="#project-section">./projects</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">./skills</a>
+                            <a class="nav-link" href="#skill-section">./skills</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">./experience</a>
+                            <a class="nav-link" href="#experience-section">./experience</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">./contact</a>
+                            <a class="nav-link" href="#contact-section">./contact</a>
                         </li>
                     </ul>
                     <div class="nav-bar-icons">
-                        <a href="#">
+                        <a href="https://github.com/malaka96" target="_blank" rel="noopener noreferrer">
                             <img src="assets/images/github.png" alt="github-logo" style="width: 35px; height: 35px;">
                         </a>
-                        <a href="#">
+                        <a href="https://www.linkedin.com/in/malaka-madhubhashana-65b810312/" target="_blank"
+                            rel="noopener noreferrer">
                             <img src="assets/images/linkedin.png" alt="linkedin-logo"
                                 style="width: 36px; height: 36px;">
                         </a>
@@ -56,7 +57,7 @@
 
     <!-- home window -->
     <div class="center-wrapper">
-        <div class="window">
+        <div class="window" id="home-section">
             <div class="window-top-bar">
                 <div class="window-dot-container">
                     <div class="window-dot red"></div>
@@ -78,13 +79,15 @@
                     <p id="skills"></p>
                 </div>
                 <div class="window-content-buttons">
-                    <button type="button" class="btn custom-btn">💻 View My Projects</button>
-                    <button type="button" class="btn custom-btn2">💭 Get In Touch</button>
+                    <a href="#project-section">
+                        <button type="button" class="btn custom-btn">💻 View My Projects</button></a>
+                    <a href="#contact-section">
+                        <button type="button" class="btn custom-btn2">💭 Get In Touch</button></a>
                 </div>
             </div>
         </div>
         <!-- main window -->
-        <div class="projects-window">
+        <div class="projects-window" id="project-section">
             <div class="window-top-bar">
                 <div class="window-dot-container">
                     <div class="window-dot red"></div>
@@ -137,7 +140,7 @@
             </div>
         </div>
 
-        <div class="skill-window">
+        <div class="skill-window" id="skill-section">
             <div class="window-top-bar">
                 <div class="window-dot-container">
                     <div class="window-dot red"></div>
@@ -217,7 +220,7 @@
 
         <!-- experience -->
 
-        <div class="experience-window">
+        <div class="experience-window" id="experience-section">
             <div class="window-top-bar">
                 <div class="window-dot-container">
                     <div class="window-dot red"></div>
@@ -323,7 +326,7 @@
 
         <!-- contact -->
 
-        <div class="contact-window">
+        <div class="contact-window" id="contact-section">
             <div class="window-top-bar">
                 <div class="window-dot-container">
                     <div class="window-dot red"></div>
@@ -331,7 +334,7 @@
                     <div class="window-dot green"></div>
                 </div>
                 <div class="window-title">
-                    <p>~/home</p>
+                    <p>~/contact-terminal</p>
                 </div>
             </div>
             <div class="window-content">
@@ -365,9 +368,9 @@
                 <div class="contact-window-right">
                     <div class="w-card">
                         <div class="w-card-content d-flex flex-column  gap-3 p-4">
-                            <p><span
-                            style="color: #05df72">$ node contact-form.js --interactive</span></p>
-                            <form class="d-flex flex-column gap-2" action="https://formspree.io/f/xqalwgzo" method="post">
+                            <p><span style="color: #05df72">$ node contact-form.js --interactive</span></p>
+                            <form class="d-flex flex-column gap-2" action="https://formspree.io/f/xqalwgzo"
+                                method="post">
                                 <label for="Name">🤵🏼 Name</label>
                                 <input type="text" placeholder="Enter you name" required>
                                 <label for="Email">📧 Email</label>
