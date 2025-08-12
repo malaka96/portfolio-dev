@@ -483,10 +483,22 @@ footer {
 }
 
 
+@media (max-width: 1440px) {
+    .project-window {
+        width: 47%;
+    }
+}
 
 @media (max-width: 1100px) {
     .project-window {
         width: 47%;
+    }
+    .contact-window,
+    .experience-window,
+    .projects-window,
+    .skill-window,
+    .window {
+        width: 90%;
     }
 }
 
@@ -501,6 +513,14 @@ footer {
 
     .window-content h5 {
         font-size: 0.9rem;
+    }
+
+    .contact-window,
+    .experience-window,
+    .projects-window,
+    .skill-window,
+    .window {
+        width: 88%;
     }
 
     .window-content p,
