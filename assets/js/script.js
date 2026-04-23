@@ -14,6 +14,21 @@ const frameworks = [
     level: "Intermediate",
   },
   {
+    title: "Spring-boot",
+    emoji: "🌱",
+    level: "Intermediate"
+  },
+  {
+    title: "React",
+    emoji: "⚛️",
+    level: "Intermediate"
+  },
+  {
+    title: "Tailwind",
+    emoji: "🌊",
+    level: "expert",
+  },
+  {
     title: "Bootstrap",
     emoji: "🅱️",
     level: "expert",
@@ -41,6 +56,11 @@ const programmingLanguages = [
     emoji: "⚡",
     level: "Intermediate",
   },
+  {
+    title: "TypeScript",
+    emoji: "⚡",
+    level: "Intermediate",
+  },
 ];
 
 const devTools = [
@@ -53,6 +73,11 @@ const devTools = [
     title: "Git",
     emoji: "📝",
     level: "Expert",
+  },
+  {
+    title: "Docker",
+    emoji: "🐋",
+    level: "Intermediate",
   },
   {
     title: "Blender",
