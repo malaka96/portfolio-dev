@@ -1,6 +1,6 @@
 const company = "HelaDev XR Labs";
 const currentWorking = "Endless Runner Game With CSGD Team";
-const skills = ["Java", "Flutter", "Unity"];
+const skills = ["Java", "Flutter", "Spring-boot", "Unity"];
 
 const frameworks = [
   {
